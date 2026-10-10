@@ -14,8 +14,8 @@ export const ServicesBlock = () => {
 			<div className="container">
 				{loading && <p>Идет загрузка...</p>}
 				{error && (
-					<p class="error">
-						<i class="fas fa-exclamation-triangle"></i> {error}
+					<p className="error">
+						<i className="fas fa-exclamation-triangle"></i> {error}
 					</p>
 				)}
 				{!loading &&
