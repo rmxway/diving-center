@@ -1,0 +1,47 @@
+.services {
+	padding: 100px 0;
+	background-color: #fff;
+	background-image: url('img/sparks.png');
+	background-attachment: fixed;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.services .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 50px;
+}
+
+.service-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+}
+
+.service-item h2 {
+	font-family: var(--header-font);
+	font-size: 22px;
+}
+
+.service-item h2,
+.service-item p {
+	margin: 0;
+}
+
+.service-item p {
+	font-size: 18px;
+}
+
+.service-item .icon {
+	text-align: center;
+	line-height: 93px;
+	color: #fff;
+	font-size: 2rem;
+	width: 93px;
+	height: 93px;
+	border-radius: 100px;
+	background-image: var(--main-gradient);
+}
