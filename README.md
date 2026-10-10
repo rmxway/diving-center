@@ -7,8 +7,8 @@
 
 Стек:
 
--   HTML
--   CSS
--   JS
--   библиотека React
--   Font-Awesome
+- HTML
+- CSS
+- JS
+- библиотека React
+- Font-Awesome

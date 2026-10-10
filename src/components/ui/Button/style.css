@@ -1,23 +1,23 @@
 .btn {
-	padding: 20px;
-	background-image: var(--main-gradient);
-	border: none;
-	color: white;
-	font-size: 18px;
-	font-weight: 100;
-	padding: 20px 30px;
-	height: 60px;
-	width: 100%;
-	line-height: 1;
-	border-radius: 20px;
-	transition: all 0.2s;
-	cursor: pointer;
+    padding: 20px;
+    background-image: var(--main-gradient);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px 30px;
+    height: 60px;
+    width: 100%;
+    line-height: 1;
+    border-radius: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
 .btn:hover {
-	filter: brightness(1.2);
+    filter: brightness(1.2);
 }
 
 .btn-inline {
-	width: auto;
+    width: auto;
 }
