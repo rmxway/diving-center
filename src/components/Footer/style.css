@@ -1,0 +1,125 @@
+footer {
+    position: relative;
+    padding: 50px 0;
+    background-image: var(--footer-gradient);
+}
+
+footer .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.rights {
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 0.25;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    gap: 43px;
+}
+
+footer .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 0.6;
+    width: 72px;
+}
+
+footer .logo img {
+    transform: scale(1.15);
+}
+
+footer .logo div {
+    transform: scale(0.7);
+}
+
+footer nav a {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.contacts ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    color: #bdbdbd;
+}
+
+.contacts ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.contacts ul li i {
+    position: relative;
+    display: block;
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.contacts .socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 -8px;
+}
+
+.contacts .socials i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.contacts .socials i:hover {
+    opacity: 1;
+}
+
+.korall-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 0;
+}
+.korall-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transform: translate(0, -90%);
+}
+
+.lines-wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.logo-lines {
+    position: absolute;
+    top: 150%;
+    left: 40%;
+    transform: scale(26) rotate(90deg);
+    mix-blend-mode: overlay;
+    opacity: 0.1;
+}

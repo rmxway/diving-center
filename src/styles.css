@@ -19,7 +19,7 @@ body {
 :root {
     --primary-color: #610db6;
     --lighten-color: #8c38e1;
-    --black-color: #24242e;
+    --black-color: #0C0429;
     --error-color: #d33a17;
     --main-gradient: linear-gradient(180deg, var(--lighten-color), var(--primary-color));
     --footer-gradient: linear-gradient(180deg, #29292f, var(--black-color));
@@ -29,9 +29,9 @@ body {
 
 .container {
     position: relative;
-    padding: 0 20px;
+    padding: 0 50px;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
