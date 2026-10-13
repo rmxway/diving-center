@@ -1,5 +1,7 @@
-export const ServiceItem = ({ service }) => {
-    const { icon, title, description } = service;
+import { FC } from 'react';
+import { ServiceItemType } from '.';
+
+export const ServiceItem: FC<ServiceItemType> = ({ description, icon, title }) => {
     return (
         <div className="service-item">
             {icon && (

@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react';
 
-export const useGetJSON = (url = '') => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
-    const [attempt, setAttempt] = useState(0);
+interface returnUseGetJSON<T> {
+    data: T[];
+    loading: boolean;
+    error: string;
+    retry: () => void;
+}
+
+export const useGetJSON = function <ArrayType>(url: string = ''): returnUseGetJSON<ArrayType> {
+    const [data, setData] = useState<ArrayType[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string>('');
+    const [attempt, setAttempt] = useState<number>(0);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -27,7 +34,7 @@ export const useGetJSON = (url = '') => {
                     setData(data);
                 }
             } catch (err) {
-                setError(err.message);
+                setError((err as Error).message);
             } finally {
                 setLoading(false);
             }
@@ -38,7 +45,7 @@ export const useGetJSON = (url = '') => {
         return () => {
             if (import.meta.env.PROD) controller.abort();
         };
-    }, [attempt]);
+    }, [attempt, url]);
 
     return {
         data,

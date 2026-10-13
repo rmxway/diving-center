@@ -1,4 +1,4 @@
-import { Button } from '../ui';
+import { Button } from '@components/ui';
 import './style.css';
 
 export const Header = () => {
