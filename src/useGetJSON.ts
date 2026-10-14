@@ -26,12 +26,12 @@ export const useGetJSON = function <ArrayType>(url: string = ''): returnUseGetJS
 
                 if (!response.ok) throw new Error('Сервер не отвечает');
 
-                const data = await response.json();
+                const respData: ArrayType[] = await response.json();
 
-                if (!Array.isArray(data)) {
+                if (!Array.isArray(respData)) {
                     throw new Error('Ошибка сервера: данные не в виде массива');
                 } else {
-                    setData(data);
+                    setData(respData);
                 }
             } catch (err) {
                 setError((err as Error).message);
