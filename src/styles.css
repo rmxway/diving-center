@@ -21,10 +21,14 @@ body {
     --lighten-color: #8c38e1;
     --black-color: #0C0429;
     --error-color: #d33a17;
+    
     --main-gradient: linear-gradient(180deg, var(--lighten-color), var(--primary-color));
     --footer-gradient: linear-gradient(180deg, #29292f, var(--black-color));
+    
     --header-font: 'Jura', Tahoma, sans-serif;
     --main-font: 'PT Sans', Arial, sans-serif;
+
+    --border-radius: 20px;
 }
 
 .container {

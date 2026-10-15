@@ -1,0 +1,35 @@
+.input-group {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+input[type='text'] {
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #353542;
+    border: 2px solid transparent;
+    color: #fff;
+    outline: none;
+    border-radius: var(--border-radius);
+    font-size: 1.125rem;
+    transition: all 0.2s;
+}
+
+input[type='text']:focus {
+    border-color: var(--lighten-color);
+}
+
+input[type='text'].input-error {
+    border-color: var(--error-color);
+}
+
+.input-group .error {
+    position: absolute;
+    top: 100%;
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}

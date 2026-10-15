@@ -1,4 +1,4 @@
-import { Header, ServicesBlock, Footer } from '@/components';
+import { Header, ServicesBlock, TellUs, Footer } from '@/components';
 import './styles.css';
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
         <>
             <Header />
             <ServicesBlock />
+            <TellUs />
             <Footer />
         </>
     );
