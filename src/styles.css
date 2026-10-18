@@ -18,6 +18,10 @@ body {
     overflow-y: scroll;
 }
 
+img {
+    pointer-events: none;
+}
+
 :root {
     --primary-color: #610db6;
     --lighten-color: #8c38e1;
