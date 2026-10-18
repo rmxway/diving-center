@@ -2,7 +2,7 @@ import './style.css';
 
 export const Footer = () => {
     return (
-        <footer>
+        <footer id="contacts">
             <div className="container">
                 <a href="#" className="logo">
                     <img src="img/logo.svg" alt="logo" />

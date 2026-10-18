@@ -1,7 +1,14 @@
+import { useContext } from 'react';
 import { Button } from '@components/ui';
+import { InputContext } from '@/InputContext';
 import './style.css';
 
 export const Header = () => {
+    const inputRef = useContext(InputContext);
+    const handleClick = () => {
+        inputRef?.current?.focus();
+    };
+
     return (
         <header>
             <div className="header-top">
@@ -29,7 +36,9 @@ export const Header = () => {
                         Дайвинг-центр с сертифицированными инструкторами. <br />
                         Обучение, погружения, экспедиции — для новичков и профи.
                     </p>
-                    <Button inline>Записаться на погружение</Button>
+                    <Button inline onClick={handleClick}>
+                        Записаться на погружение
+                    </Button>
                 </div>
             </div>
         </header>

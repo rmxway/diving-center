@@ -6,7 +6,7 @@ import './style.css';
 export const Locations = () => {
     const { data, error, loading } = useGetJSON<LocationItemProps>(getLocalJsonUrl('locations'));
     return (
-        <div className="locations">
+        <div className="locations" id="locations">
             <div className="container">
                 <h2>Локации</h2>
                 {loading && <p>Идет загрузка...</p>}
