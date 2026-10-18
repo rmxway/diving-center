@@ -1,7 +1,7 @@
-import { useGetJSON } from '@/useGetJSON';
-import { getLocalUrl } from '@/services.js';
-import './style.css';
+import { useGetJSON } from '@/hooks';
 import { ServiceItem } from './ServiceItem';
+import { getLocalJsonUrl } from '@/helpers';
+import './style.css';
 
 export interface ServiceItemType {
     icon: string;
@@ -10,7 +10,7 @@ export interface ServiceItemType {
 }
 
 export const ServicesBlock = () => {
-    const { data, error, loading } = useGetJSON<ServiceItemType>(getLocalUrl('services.json'));
+    const { data, error, loading } = useGetJSON<ServiceItemType>(getLocalJsonUrl('services'));
 
     return (
         <section className="services" id="services">

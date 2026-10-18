@@ -7,7 +7,7 @@ interface returnUseGetJSON<T> {
     retry: () => void;
 }
 
-export const useGetJSON = function <ArrayType>(url: string = ''): returnUseGetJSON<ArrayType> {
+export const useGetJSON = function <ArrayType>(url: string): returnUseGetJSON<ArrayType> {
     const [data, setData] = useState<ArrayType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string>('');

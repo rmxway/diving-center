@@ -2,6 +2,7 @@ footer {
     position: relative;
     padding: 50px 0;
     background-image: var(--footer-gradient);
+    z-index: 5;
 }
 
 footer .container {

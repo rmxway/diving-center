@@ -9,6 +9,7 @@
 
 - HTML
 - CSS
-- JS
-- библиотека React
+- TypeScript
+- React
 - Font-Awesome
+- Github pages

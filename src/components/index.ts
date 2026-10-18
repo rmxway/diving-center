@@ -1,4 +1,5 @@
 export * from './Header';
 export * from './ServicesBlock';
-export * from './TellUs';
+export * from './TextUs';
+export * from './Locations';
 export * from './Footer';

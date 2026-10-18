@@ -2,12 +2,14 @@
     "name": "main-project",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://rmxway.github.io/diving-center",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
+        "deploy": "gh-pages -d dist",
         "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,json,md}\""
     },
     "dependencies": {
@@ -16,6 +18,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.13.0",
+        "@types/gh-pages": "^6",
         "@types/node": "^26.6.5",
         "@types/react": "^19.3.0",
         "@types/react-dom": "^19.3.0",
@@ -26,6 +29,7 @@
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.0.0",
         "eslint-plugin-react-refresh": "^0.4.14",
+        "gh-pages": "^6.3.0",
         "globals": "^15.11.0",
         "prettier": "^3.9.9",
         "typescript": "^6.0.2",

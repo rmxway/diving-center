@@ -1,9 +1,9 @@
 import { SubmitEventHandler } from 'react';
-import { Button, Input } from '../ui';
+import { Button, Input } from '@/components/ui';
+import { useFormFields } from '@/hooks';
 import './style.css';
-import { useFormFields } from './useFormFields';
 
-export const TellUs = () => {
+export const TextUs = () => {
     const { errors, dirty, isComplete, onChange, onDirty } = useFormFields();
 
     const onSubmit: SubmitEventHandler<HTMLFormElement> = (event) => {
@@ -19,13 +19,13 @@ export const TellUs = () => {
     };
 
     return (
-        <div className="tell-us">
+        <div className="text-us">
             <div className="container">
-                <div className="tell-us-wrapper">
-                    <div className="tell-us-info">
+                <div className="text-us-wrapper">
+                    <div className="text-us-info">
                         Оставьте заявку на групповое погружение и мы с Вами свяжемся в ближайшее время. Наш консультант ответит на все ваши вопросы и расскажет что делать дальше.
                     </div>
-                    <form className="tell-us-form" onSubmit={onSubmit}>
+                    <form className="text-us-form" onSubmit={onSubmit}>
                         <Input placeholder="Имя" name="name" error={!!errors.name && dirty ? errors.name : ''} onChange={onChange} />
                         <Input placeholder="E-mail" name="email" error={!!errors.email && dirty ? errors.email : ''} onChange={onChange} />
                         <Input placeholder="Телефон" name="phone" error={!!errors.phone && dirty ? errors.phone : ''} onChange={onChange} />
