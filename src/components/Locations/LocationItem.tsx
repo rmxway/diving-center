@@ -8,6 +8,7 @@ export interface LocationItemProps {
 }
 
 export const LocationItem: FC<LocationItemProps> = ({ img, title, description, hit }) => {
+    const isEmpty = !!title && !!description && !!img;
     return (
         <div className="location-item">
             {hit && (
@@ -16,12 +17,15 @@ export const LocationItem: FC<LocationItemProps> = ({ img, title, description, h
                     <img src="img/hit.svg" alt="hit" />
                 </div>
             )}
-            <div className="location-block">
+            <div className={`location-block${!isEmpty ? ' location-block--empty' : ''}`}>
                 {img && <img className="location-image" src={img} alt={title} />}
-                <div className="location-body">
-                    {title && <div className="location-title">{title}</div>}
-                    {description && <div className="location-description">{description}</div>}
-                </div>
+                {title && (
+                    <div className="location-body">
+                        {title && <div className="location-title">{title}</div>}
+                        {description && <div className="location-description">{description}</div>}
+                    </div>
+                )}                
+                {!isEmpty && <div>Планируется...</div>}
             </div>
         </div>
     );

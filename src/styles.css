@@ -10,10 +10,12 @@ html {
 
 body {
     margin: 0;
-    min-width: 360px;
+    min-width: 400px;
     font-family: var(--main-font);
     background-color: var(--black-color);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 :root {
@@ -42,7 +44,7 @@ h2 {
 
 .container {
     position: relative;
-    padding: 0 50px;
+    padding: 0 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;

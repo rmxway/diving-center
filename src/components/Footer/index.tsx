@@ -44,7 +44,7 @@ export const Footer = () => {
             <img src="img/korall-1.png" className="korall-1" alt="Кораллы" />
             <img src="img/korall-2.png" className="korall-2" alt="Песок" />
             <div className="lines-wrapper">
-                <img src="img/logo.svg" className="logo-lines" alt="logo" />
+                <div className="logo-lines" />
             </div>
         </footer>
     );

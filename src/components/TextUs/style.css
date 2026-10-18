@@ -2,7 +2,9 @@
     padding: 55px 0;
     background-image: url('/img/form-back.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     z-index: 3;
 }
 
@@ -36,4 +38,20 @@
     bottom: -70px;
     left: 10%;
     z-index: 0;
+}
+
+@media (max-width: 1000px) {
+    .text-us-wrapper {
+        padding-top: 50px;
+        margin: 0 auto;
+        max-width: 380px;
+        grid-template-columns: 1fr;
+    }
+
+    .aqualung {
+        bottom: auto;
+        top: -30%;
+        left: 50%;
+        transform: translate(-50%, 0) scale(.8);
+    }
 }

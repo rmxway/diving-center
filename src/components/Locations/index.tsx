@@ -15,7 +15,7 @@ export const Locations = () => {
                         <i className="fas fa-exclamation-triangle"></i> {error}
                     </p>
                 )}
-                <div className="locations-wrapper">{!error && !loading && data.length > 0 && data.map((props) => <LocationItem key={props.img} {...props} />)}</div>
+                <div className="locations-wrapper">{!error && !loading && data.length > 0 && data.map((props, idx) => <LocationItem key={idx} {...props} />)}</div>
             </div>
         </div>
     );

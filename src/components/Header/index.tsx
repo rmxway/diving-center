@@ -1,13 +1,32 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Button } from '@components/ui';
 import { InputContext } from '@/InputContext';
 import './style.css';
 
 export const Header = () => {
     const inputRef = useContext(InputContext);
+    const navRef = useRef(null);
+    const buttonRef = useRef(null);
+    const [show, setShow] = useState(false);
     const handleClick = () => {
         inputRef?.current?.focus();
     };
+
+    useEffect(() => {
+        const handle = (e: Event) => {
+            const { target } = e;
+
+            if (target !== navRef.current && target !== buttonRef.current) {
+                setShow(false);
+            }
+        };
+
+        document.addEventListener('click', handle);
+
+        return () => {
+            document.removeEventListener('click', handle);
+        };
+    }, []);
 
     return (
         <header>
@@ -20,12 +39,15 @@ export const Header = () => {
                             Дайвинг-центр
                         </div>
                     </a>
-                    <nav>
+                    <nav ref={navRef} className={`${show ? 'show' : ''}`}>
                         <a href="#services">Услуги</a>
                         <a href="#text-us">Напишите нам</a>
                         <a href="#locations">Локации</a>
                         <a href="#contacts">Контакты</a>
                     </nav>
+                    <button ref={buttonRef} type="button" className="burger" onClick={() => setShow(!show)}>
+                        {show ? <img src="img/close.svg" alt="close" /> : <img src="img/burger.svg" alt="burger" />}
+                    </button>
                 </div>
             </div>
             <div></div>
