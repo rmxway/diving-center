@@ -18,6 +18,10 @@
     z-index: 1;
 }
 
+.text-us-wrapper.success {
+    padding-top: 0;
+}
+
 .text-us-info {
     position: relative;
 }
@@ -46,6 +50,9 @@
     text-align: center;
     font-size: 1.5rem;
     color: #fff;
+}
+.text-us-success p {
+    margin-bottom: 0;
 }
 
 .text-us-success .fas {

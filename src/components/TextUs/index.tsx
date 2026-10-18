@@ -30,7 +30,7 @@ export const TextUs = () => {
     return (
         <div className="text-us" id="text-us">
             <div className="container">
-                <div className="text-us-wrapper">
+                <div className={`text-us-wrapper${isSuccess ? ' success' : ''}`}>
                     {!isSuccess ? (
                         <>
                             <div className="text-us-info">
