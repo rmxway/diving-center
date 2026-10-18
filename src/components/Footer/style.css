@@ -19,7 +19,7 @@ footer .container {
     margin: 0;
     font-size: 0.8rem;
     color: #fff;
-    opacity: 0.25;
+    opacity: 0.3;
 }
 
 .contacts {
@@ -34,15 +34,14 @@ footer .logo {
     flex-direction: column;
     gap: 5px;
     opacity: 0.6;
-    width: 72px;
 }
 
 footer .logo img {
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
 footer .logo div {
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 footer nav a {
@@ -136,6 +135,10 @@ footer nav a {
 }
 
 @media (max-width: 1000px) {
+    footer {
+        padding-bottom: 30px;
+    }
+
     footer .container {
         flex-direction: column;
         gap: 50px;

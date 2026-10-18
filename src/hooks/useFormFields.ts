@@ -34,5 +34,5 @@ export const useFormFields = () => {
         setDirty(true);
     };
 
-    return { errors, dirty, isComplete, onChange, onDirty };
+    return { values, errors, dirty, isComplete, onChange, onDirty };
 };
