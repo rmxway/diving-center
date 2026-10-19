@@ -1,11 +1,17 @@
 .text-us {
     padding: 55px 0;
     background-image: url('/img/form-back.jpg');
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     z-index: 3;
+}
+
+@supports (background-attachment: fixed) {
+    .text-us {
+        background-attachment: fixed;
+    }
 }
 
 .text-us-wrapper {
@@ -33,7 +39,7 @@
     align-items: center;
     background-color: #16161cbb;
     border-radius: 20px;
-    font-size: 1.375rem;
+    font-size: 1.275rem;
     padding: 20px;
     max-width: 360px;
     backdrop-filter: blur(20px);
@@ -48,7 +54,7 @@
 
 .text-us-success {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #fff;
 }
 .text-us-success p {
@@ -88,8 +94,7 @@
     }
 
     .aqualung {
-        bottom: auto;
-        top: -120%;
+        bottom: -50%;        
         left: 50%;
         transform: translate(-50%, 0) scale(.8);
     }
