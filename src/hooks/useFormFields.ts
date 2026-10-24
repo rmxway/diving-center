@@ -1,6 +1,8 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 
 const fields = { name: '', email: '', phone: '' };
+const stringRegExp = /^[А-ЯA-Z ]{3,}$/i;
+const numberRegExp = /^[0-9 ()+-]{9,20}$/i;
 const emailRegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 export const useFormFields = () => {
@@ -11,9 +13,9 @@ export const useFormFields = () => {
 
     useEffect(() => {
         setErrors({
-            name: values.name.length < 3 ? 'Введите корректное имя' : '',
+            name: !stringRegExp.test(values.name) ? 'Введите корректное имя' : '',
             email: !emailRegExp.test(values.email) ? 'Введите email корректно' : '',
-            phone: String(values.phone).length < 9 ? 'Телефон не корректен' : '',
+            phone: !numberRegExp.test(values.phone) ? 'Телефон не корректен' : '',
         });
     }, [values]);
 
