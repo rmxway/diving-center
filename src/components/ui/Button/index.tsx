@@ -1,11 +1,11 @@
-import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
+import { FC, JSX } from 'react';
 import './style.css';
 
-type ButtonType = {
+type ButtonType = JSX.IntrinsicElements['button'] & {
     inline?: boolean;
 };
 
-export const Button: FC<ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren<ButtonType>> = ({ inline, children, ...props }) => {
+export const Button: FC<ButtonType> = ({ inline, children, ...props }) => {
     return (
         <button {...props} className={`btn ${inline && 'btn-inline'}`}>
             {children}

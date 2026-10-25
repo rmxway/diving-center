@@ -1,13 +1,6 @@
 import { useState, useEffect } from 'react';
 
-interface returnUseGetJSON<T> {
-    data: T[];
-    loading: boolean;
-    error: string;
-    retry: () => void;
-}
-
-export const useGetJSON = function <ArrayType>(url: string): returnUseGetJSON<ArrayType> {
+export const useGetJSON = function <ArrayType>(url: string) {
     const [data, setData] = useState<ArrayType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string>('');
@@ -52,5 +45,5 @@ export const useGetJSON = function <ArrayType>(url: string): returnUseGetJSON<Ar
         loading,
         error,
         retry: () => setAttempt((prev) => prev + 1),
-    };
+    } as const;
 };

@@ -1,14 +1,14 @@
-import { forwardRef, InputHTMLAttributes } from 'react';
+import { forwardRef, JSX } from 'react';
 import './style.css';
 
-type InputType = {
+type InputType = JSX.IntrinsicElements['input'] & {
     error?: string;
 };
 
-export const Input = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement> & InputType>(({ error, type = 'text', ...props }, ref) => {
+export const Input = forwardRef<HTMLInputElement, InputType>(({ error, type = 'text', ...props }, ref) => {
     return (
         <div className="input-group">
-            <input className={`form-input ${error && 'input-error'}`} ref={ref} type={type} autoComplete="off" autoSave="off" {...props} />
+            <input className={`form-input ${error && 'input-error'}`} autoComplete="off" autoSave="off" {...{ ref, type, ...props }} />
             {error && <div className="error">{error}</div>}
         </div>
     );

@@ -1,16 +1,10 @@
 import { useGetJSON } from '@/hooks';
-import { ServiceItem } from './ServiceItem';
+import { ServiceItem, ServiceItemProps } from './ServiceItem';
 import { getLocalJsonUrl } from '@/helpers';
 import './style.css';
 
-export interface ServiceItemType {
-    icon: string;
-    title: string;
-    description: string;
-}
-
 export const ServicesBlock = () => {
-    const { data, error, loading } = useGetJSON<ServiceItemType>(getLocalJsonUrl('services'));
+    const { data, error, loading } = useGetJSON<ServiceItemProps>(getLocalJsonUrl('services'));
 
     return (
         <section className="services" id="services">

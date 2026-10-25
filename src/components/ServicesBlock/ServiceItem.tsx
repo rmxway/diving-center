@@ -1,7 +1,12 @@
 import { FC } from 'react';
-import { ServiceItemType } from '.';
 
-export const ServiceItem: FC<ServiceItemType> = ({ description, icon, title }) => {
+export interface ServiceItemProps {
+    icon: string;
+    title: string;
+    description: string;
+}
+
+export const ServiceItem: FC<ServiceItemProps> = ({ description, icon, title }) => {
     return (
         <div className="service-item">
             {icon && (
