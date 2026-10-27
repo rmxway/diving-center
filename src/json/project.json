@@ -1,0 +1,12 @@
+{
+    "id": "diving-center",
+    "title": "Дайвинг-центр",
+    "subtitle": "Итоговый проект обучения на курсе",
+    "description": "Результат обучения на курсе Frontend-разработка и Web-дизайн в РЭУ им Г.В. Плеханова. Проект проектировался в Figma с нуля, после чего был перенесен на React. Разработан с помощью инструментов которые были изучены на курсе.",
+    "stack": ["HTML", "CSS", "TypeScript", "React", "gh-pages", "Font Awesome", "ESLint", "Prettier"],
+    "kind": "pet",
+    "githubUrl": "https://github.com/rmxway/diving-center",
+    "demoUrl": "https://rmxway.github.io/diving-center/",
+    "accent": "blue",
+    "previewImage": "img/preview.jpg"
+}
