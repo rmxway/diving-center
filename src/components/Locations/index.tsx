@@ -1,10 +1,10 @@
 import { useGetJSON } from '@/hooks';
 import { LocationItem, LocationItemProps } from './LocationItem';
-import { getLocalJsonUrl } from '@/helpers';
+import { LOCATIONS_URL } from '@/constants';
 import './style.css';
 
 export const Locations = () => {
-    const { data, error, loading } = useGetJSON<LocationItemProps>(getLocalJsonUrl('locations'));
+    const { data, error, loading } = useGetJSON<LocationItemProps>(LOCATIONS_URL);
     return (
         <div className="locations" id="locations">
             <div className="container">
