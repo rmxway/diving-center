@@ -20,23 +20,23 @@ export const Footer = () => {
                 <div className="contacts">
                     <ul>
                         <li>
-                            <i className="fas fa-map-marker-alt"></i>
+                            <i className="fa fa-map"></i>
                             <div>Москва, ул. Погружений дом 17 студия / бассейн для тренировок</div>
                         </li>
                         <li>
-                            <i className="fas fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                             <div>mailus@deepdiving.ru</div>
                         </li>
                         <li>
-                            <i className="fas fa-phone-alt"></i>
+                            <i className="fa fa-phone"></i>
                             <div>+7 (996) 000 - 89 - 32</div>
                         </li>
                     </ul>
                     <div className="socials">
-                        <i className="fab fa-instagram"></i>
-                        <i className="fab fa-vk"></i>
-                        <i className="fab fa-telegram-plane"></i>
-                        <i className="fab fa-vimeo-v"></i>
+                        <i className="fa fa-instagram"></i>
+                        <i className="fa fa-vk"></i>
+                        <i className="fa fa-telegram"></i>
+                        <i className="fa fa-vimeo"></i>
                     </div>
                 </div>
                 <p className="rights">Все права защищены. Дайвинг-центр | 2026</p>

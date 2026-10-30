@@ -1,6 +1,6 @@
 .services {
     padding: 100px 0;
-    background-color: #fff;    
+    background-color: #fff;
 }
 
 .services:before {
@@ -46,14 +46,15 @@
 
 .service-item .icon {
     text-align: center;
-    line-height: 93px;
+    line-height: 75px;
     color: #fff;
-    font-size: 2rem;
-    width: 93px;
-    height: 93px;
+    font-size: 1.85rem;
+    width: 75px;
+    height: 75px;
     border-radius: 100px;
     background-image: var(--main-gradient);
 }
+
 
 @media (max-width: 1000px) {
     .services {
